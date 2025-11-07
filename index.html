@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Binotel Demo</title>
+  <meta name="description" content="Демо-лендінг для презентації можливостей продуктів Binotel: SmartCRM, OnlineChat, FeedbackCall та автообробка втрачених дзвінків." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1020;           /* темний фон */
+      --card:#17182a;         /* картки */
+      --text:#e6e8ef;         /* основний текст */
+      --muted:#b6bbd1;        /* другорядний текст */
+      --brand:#7c3aed;        /* фіолетовий акцент */
+      --brand-2:#06b6d4;      /* бірюзовий акцент */
+      --ok:#10b981;           /* зелений */
+      --warn:#f59e0b;         /* жовтий */
+      --danger:#ef4444;       /* червоний */
+      --radius:18px;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:radial-gradient(1200px 800px at 10% -10%,rgba(124,58,237,.25),transparent 50%),radial-gradient(900px 600px at 110% 10%,rgba(6,182,212,.15),transparent 50%),var(--bg)}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1120px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:700}
+    .logo-badge{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;box-shadow:var(--shadow)}
+    .logo-badge span{font-weight:800}
+    nav a{opacity:.9;margin-left:18px}
+
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:36px 0}
+    .hero h1{font-size:48px;line-height:1.05;margin:0 0 14px}
+    .hero p{margin:0 0 24px;color:var(--muted);font-size:18px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:12px 18px;border-radius:14px;border:1px solid transparent;display:inline-flex;align-items:center;gap:10px;font-weight:600;transition:.25s}
+    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));}
+    .btn-primary:hover{filter:brightness(1.08)}
+    .btn-ghost{border-color:#2a2d47;background:#16182b}
+    .btn-ghost:hover{border-color:#3a3e62}
+
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.00));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+
+    .mock{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:16px;min-height:260px}
+    .status{display:flex;gap:10px;margin-top:12px}
+    .chip{padding:6px 10px;border-radius:999px;font-size:12px;border:1px solid rgba(255,255,255,.15);opacity:.9}
+    .chip.ok{background:rgba(16,185,129,.1);border-color:rgba(16,185,129,.3)}
+    .chip.warn{background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.35)}
+
+    .section{padding:36px 0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+
+    .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+    .kpi{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:4px;text-align:center}
+    .kpi b{font-size:22px}
+
+    footer{opacity:.8;padding:30px 0;color:var(--muted)}
+    @media (max-width:960px){
+      .hero{grid-template-columns:1fr}
+      .grid,.grid-2,.kpis{grid-template-columns:1fr}
+      .hero h1{font-size:38px}
+    }
+  </style>
+</head>
+<body>
+  <header class="container">
+    <div class="logo">
+      <div class="logo-badge"><span>β</span></div>
+      <div>Binotel <span style="opacity:.7">Demo</span></div>
+    </div>
+    <nav>
+      <a href="#features">Можливості</a>
+      <a href="#products">Продукти</a>
+      <a href="#contact">Контакт</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Єдине вікно комунікацій: <br/>SmartCRM × OnlineChat × ВАТС</h1>
+        <p>Демо-сторінка для швидкої презентації ключових можливостей: FeedbackCall, автоматична обробка втрачених дзвінків, інтеграції та аналітика. Ідеально для короткого живого демо клієнту.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#contact">Попросити демо</a>
+          <a class="btn btn-ghost" href="#features">Дивитись можливості</a>
+        </div>
+        <div class="kpis">
+          <div class="kpi"><b>80+</b><span>відгуків/міс із FeedbackCall</span></div>
+          <div class="kpi"><b>-60%</b><span>менше втрачених дзвінків</span></div>
+          <div class="kpi"><b>10 хв</b><span>на запуск модуля</span></div>
+          <div class="kpi"><b>24/7</b><span>контроль звернень</span></div>
+        </div>
+      </div>
+      <div class="card mock" aria-label="Демо-екран">
+        <h3 style="margin:0 0 10px">Live-мокап</h3>
+        <div style="display:grid;gap:10px">
+          <div class="card">
+            <b>FeedbackCall</b>
+            <p style="margin:6px 0 0;color:var(--muted)">Клієнт оцінює розмову в 1 клік. Негатив — в роботу одразу.</p>
+          </div>
+          <div class="card">
+            <b>Автообробка втрачених</b>
+            <p style="margin:6px 0 0;color:var(--muted)">Система шукає вільного менеджера та сама з’єднує з клієнтом.</p>
+          </div>
+        </div>
+        <div class="status">
+          <span class="chip ok">Стабільно</span>
+          <span class="chip warn">Є демо-режим</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <h2>Ключові можливості</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>FeedbackCall</h3>
+          <p>Автоматичний збір оцінок після дзвінка: миттєвий фідбек, контроль сервісу, швидкі реакції на негатив.</p>
+        </div>
+        <div class="card">
+          <h3>Автообробка втрачених</h3>
+          <p>Жоден дзвінок не загубиться: система сама передзвонює та з’єднує клієнта з вільним менеджером.</p>
+        </div>
+        <div class="card">
+          <h3>Інтеграції з CRM</h3>
+          <p>SmartCRM фіксує історію комунікацій: дзвінки, чати, задачі, угоди — все в одній картці клієнта.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="section">
+      <h2>Продукти</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>SmartCRM</h3>
+          <p>Єдине вікно для відділів продажів і підтримки: історія звернень, скрипти, тригери, аналітика.</p>
+        </div>
+        <div class="card">
+          <h3>OnlineChat</h3>
+          <p>Лід-форми та чат на сайті з інтеграцією у CRM. Збір контактів, швидкі відповіді, автоматичні задачі.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Запросити демо</h2>
+      <div class="grid-2">
+        <div class="card">
+          <p>Залиште контакт — надішлемо доступ до демонстрації та коротке відео.</p>
+          <form onsubmit="event.preventDefault(); alert('Дякуємо! Ми з вами зв’яжемось.');" style="display:grid;gap:10px;margin-top:10px">
+            <input required placeholder="Ваше ім’я" style="padding:12px;border-radius:12px;border:1px solid #2a2d47;background:#121324;color:var(--text)" />
+            <input required type="email" placeholder="Email" style="padding:12px;border-radius:12px;border:1px solid #2a2d47;background:#121324;color:var(--text)" />
+            <button class="btn btn-primary" type="submit">Надіслати</button>
+          </form>
+        </div>
+        <div class="card">
+          <p><b>Або напишіть нам:</b></p>
+          <p><a href="mailto:demo@binotel.example">demo@binotel.example</a><br/>
+             <a href="tel:+380000000000">+38 000 000 00 00</a></p>
+          <p style="color:var(--muted)">Це демо-шаблон. Замініть контакти на робочі перед публікацією.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    © <span id="y"></span> Binotel Demo. Для демонстраційних цілей.
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>
+
